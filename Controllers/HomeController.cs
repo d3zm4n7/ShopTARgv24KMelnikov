@@ -13,11 +13,15 @@ namespace ShopTARgv24KMelnikov.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Spaceships()
         {
             return View();
         }
 
+        public IActionResult Index()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

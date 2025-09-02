@@ -1,3 +1,7 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System;
+
 namespace ShopTARgv24KMelnikov
 {
     public class Program
@@ -8,6 +12,9 @@ namespace ShopTARgv24KMelnikov
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //builder.Services.AddScoped< SpaceshipServices>();
+            builder.Services.AddDbContext<Data.ShopTARgv24KMelnikovContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
