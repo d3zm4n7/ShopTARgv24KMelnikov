@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShopTARgv24KMelnikov.ApplicationServices\ShopTARgv24KMelnikov.ApplicationServices.csproj" />
     <ProjectReference Include="..\ShopTARgv24KMelnikov.Data\ShopTARgv24KMelnikov.Data.csproj" />
   </ItemGroup>
 

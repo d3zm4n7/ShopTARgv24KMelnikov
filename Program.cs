@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using ShopTARgv24KMelnikov.ApplicationServices.Services;
+using ShopTARgv24KMelnikov.Core.ServiceInterface;
 using System;
 
 namespace ShopTARgv24KMelnikov
@@ -15,7 +17,7 @@ namespace ShopTARgv24KMelnikov
 
             //builder.Services.AddScoped< SpaceshipServices>();
             builder.Services.AddDbContext<Data.ShopTARgv24KMelnikovContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

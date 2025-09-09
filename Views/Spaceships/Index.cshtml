@@ -1,5 +1,10 @@
 ﻿@model IEnumerable<ShopTARgv24KMelnikov.Models.Spaceships.SpaceshipsIndexViewModel>
 
+
+    <div>
+        <a asp-action="create" asp-controller="spaceships" type="submit" class="btn btn-primary">CREATE</a>
+
+    </div>
 <div class="h1">
     Spaceships
 </div>
@@ -33,6 +38,10 @@
                     @* <td>@spaceship.EnginePower</td>
                     <td>@spaceship.Passengers</td>
                     <td>@spaceship.InnerVolume</td> *@
+                    <td>
+                        <a asp-action="delete" asp-controller="spaceships" asp-route-id="@spaceship.Id" class="btn btn-outline-danger">Delete</a>
+
+                    </td>
                 </tr>
                 nr++;
             }
