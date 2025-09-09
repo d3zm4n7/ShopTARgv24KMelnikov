@@ -12,24 +12,29 @@
                 <th scope="col">Type Name</th>
                 <th scope="col">Built Date</th>
                 <th scope="col">Crew</th>
-                <th scope="col">Engine Power</th>
+                @* <th scope="col">Engine Power</th>
                 <th scope="col">Passengers</th>
-                <th scope="col">Inner Volume</th>
+                <th scope="col">Inner Volume</th> *@
 </tr>
 </thead>
 <tbody>
+            @{
+                int nr = 1;
+            }
             @foreach (var spaceship in Model)
             {
                 <tr>
-                    <th scope="row">@spaceship.Id</th>
+                    @* <th scope="row">@spaceship.Id</th> *@
+                    <td>@nr</td>
                     <td>@spaceship.Name</td>
                     <td>@spaceship.TypeName</td>
                     <td>@spaceship.BuiltDate</td>
                     <td>@spaceship.Crew</td>
-                    <td>@spaceship.EnginePower</td>
+                    @* <td>@spaceship.EnginePower</td>
                     <td>@spaceship.Passengers</td>
-                    <td>@spaceship.InnerVolume</td>
+                    <td>@spaceship.InnerVolume</td> *@
                 </tr>
+                nr++;
             }
         </tbody>
 

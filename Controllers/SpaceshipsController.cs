@@ -23,6 +23,7 @@ namespace ShopTARgv24KMelnikov.Controllers
                     Name = x.Name,
                     TypeName = x.TypeName,
                     BuiltDate = x.BuiltDate,
+                    Crew = x.Crew
                 });
 
             return View(result);
