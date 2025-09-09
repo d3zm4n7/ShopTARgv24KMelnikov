@@ -1,6 +1,6 @@
 ﻿namespace ShopTARgv24KMelnikov.Models.Spaceships
 {
-    public class SpaceshipsCreateViewModel
+    public class SpaceshipsCreateUpdateViewModel
     {
         public Guid? Id { get; set; }
         public string? Name { get; set; }

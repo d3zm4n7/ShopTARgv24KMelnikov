@@ -17,6 +17,7 @@
                 <th scope="col">Type Name</th>
                 <th scope="col">Built Date</th>
                 <th scope="col">Crew</th>
+                <th scope="col"></th>
                 @* <th scope="col">Engine Power</th>
                 <th scope="col">Passengers</th>
                 <th scope="col">Inner Volume</th> *@
@@ -39,6 +40,7 @@
                     <td>@spaceship.Passengers</td>
                     <td>@spaceship.InnerVolume</td> *@
                     <td>
+                        <a asp-action="update" asp-controller="spaceships" asp-route-id="@spaceship.Id" class="btn btn-outline-primary">Update</a>
                         <a asp-action="delete" asp-controller="spaceships" asp-route-id="@spaceship.Id" class="btn btn-outline-danger">Delete</a>
 
                     </td>
